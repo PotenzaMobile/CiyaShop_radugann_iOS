@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  CiyaShop
+//
+//  Created by Apple on 09/09/20.
+//  Copyright © 2020 Apple. All rights reserved.
+//
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma mark - API key and Links
+
+
+
+#endif /* PrefixHeader_pch */

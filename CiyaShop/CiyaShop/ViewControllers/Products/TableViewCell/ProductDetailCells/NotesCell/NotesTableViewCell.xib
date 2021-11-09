@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="NotesTableViewCell" customModule="CiyaShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-Ua-GmC">
+                        <rect key="frame" x="10" y="10" width="300" height="82"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH0-K3-ewn">
+                                <rect key="frame" x="8" y="8" width="284" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IEO-Ox-st8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDO-4Z-fEL">
+                                <rect key="frame" x="8" y="37" width="284" height="35"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v5V-hn-rVw">
+                                        <rect key="frame" x="10" y="0.0" width="264" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="aWy-hQ-uBp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="KGk-i7-Jjw" id="mED-ed-Du2"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v5V-hn-rVw" secondAttribute="trailing" constant="10" id="0cV-Wr-28a"/>
+                                    <constraint firstItem="v5V-hn-rVw" firstAttribute="leading" secondItem="jDO-4Z-fEL" secondAttribute="leading" constant="10" id="5Nx-fp-EXP"/>
+                                    <constraint firstAttribute="bottom" secondItem="v5V-hn-rVw" secondAttribute="bottom" id="TEh-5j-4MD"/>
+                                    <constraint firstItem="v5V-hn-rVw" firstAttribute="top" secondItem="jDO-4Z-fEL" secondAttribute="top" id="YLc-51-Vhx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jDO-4Z-fEL" firstAttribute="trailing" secondItem="dH0-K3-ewn" secondAttribute="trailing" id="1N6-dv-qBL"/>
+                            <constraint firstItem="jDO-4Z-fEL" firstAttribute="leading" secondItem="dH0-K3-ewn" secondAttribute="leading" id="3oW-QE-Wwe"/>
+                            <constraint firstAttribute="trailing" secondItem="dH0-K3-ewn" secondAttribute="trailing" constant="8" id="XTn-vx-Spd"/>
+                            <constraint firstItem="dH0-K3-ewn" firstAttribute="leading" secondItem="9XS-Ua-GmC" secondAttribute="leading" constant="8" id="Z2b-3H-AUg"/>
+                            <constraint firstItem="dH0-K3-ewn" firstAttribute="top" secondItem="9XS-Ua-GmC" secondAttribute="top" constant="8" id="iQp-vh-dux"/>
+                            <constraint firstAttribute="bottom" secondItem="jDO-4Z-fEL" secondAttribute="bottom" constant="10" id="szx-xO-a4R"/>
+                            <constraint firstItem="jDO-4Z-fEL" firstAttribute="top" secondItem="dH0-K3-ewn" secondAttribute="bottom" constant="8" symbolic="YES" id="wqe-il-0Kn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9XS-Ua-GmC" secondAttribute="trailing" constant="10" id="ICC-Sb-66u"/>
+                    <constraint firstAttribute="bottom" secondItem="9XS-Ua-GmC" secondAttribute="bottom" constant="13" id="UQj-cr-Bne"/>
+                    <constraint firstItem="9XS-Ua-GmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kca-hL-FUp"/>
+                    <constraint firstAttribute="bottom" secondItem="jDO-4Z-fEL" secondAttribute="bottom" constant="23" id="ukV-7v-Yla"/>
+                    <constraint firstItem="9XS-Ua-GmC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="v3c-Lj-G4H"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblNotesHeading" destination="dH0-K3-ewn" id="060-HC-Qmh"/>
+                <outlet property="txtNotes" destination="v5V-hn-rVw" id="LDn-Ll-5P8"/>
+                <outlet property="vwNotes" destination="9XS-Ua-GmC" id="nHC-0J-Wa8"/>
+                <outlet property="vwNotesContent" destination="jDO-4Z-fEL" id="UWj-24-aas"/>
+            </connections>
+            <point key="canvasLocation" x="-38" y="5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
