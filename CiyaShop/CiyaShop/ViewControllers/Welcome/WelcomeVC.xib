@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -70,7 +71,7 @@
                         <outlet property="delegate" destination="-1" id="Rsh-Tl-fh0"/>
                     </connections>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="255" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-eQ-hf5">
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="255" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-eQ-hf5">
                     <rect key="frame" x="20" y="481.5" width="50" height="27"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="8Kw-8x-EnC"/>
@@ -81,7 +82,7 @@
                         <action selector="skipButtonClicked:" destination="-1" eventType="touchUpInside" id="iHQ-Qb-Nof"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOO-Cq-cI7">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOO-Cq-cI7">
                     <rect key="frame" x="250" y="483" width="50" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="k3B-Uo-zbL"/>
@@ -92,14 +93,15 @@
                         <action selector="nextDoneButtonClicked:" destination="-1" eventType="touchUpInside" id="Xd7-QM-2Qv"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Ciyashop 2020 | All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s0-GS-BUO">
-                    <rect key="frame" x="61" y="520.5" width="198" height="13.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©  RadugaNN 2021 | All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s0-GS-BUO">
+                    <rect key="frame" x="57" y="520.5" width="206" height="13.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="YZT-4e-Qkb"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="QAL-4k-GMt" firstAttribute="leading" secondItem="YZT-4e-Qkb" secondAttribute="leading" id="2iY-q6-urd"/>
                 <constraint firstItem="5dk-eQ-hf5" firstAttribute="top" secondItem="QAL-4k-GMt" secondAttribute="bottom" constant="20" id="7Ri-1B-GFZ"/>
@@ -113,7 +115,6 @@
                 <constraint firstAttribute="bottom" secondItem="6s0-GS-BUO" secondAttribute="bottom" constant="34" id="p1m-qn-l5V"/>
                 <constraint firstItem="6s0-GS-BUO" firstAttribute="centerX" secondItem="NCC-jo-YB0" secondAttribute="centerX" id="qnu-Mp-kjl"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="YZT-4e-Qkb"/>
             <point key="canvasLocation" x="1" y="35"/>
         </view>
     </objects>
@@ -121,5 +122,8 @@
         <image name="welcome-image1" width="315" height="243.5"/>
         <image name="welcome-image2" width="316" height="243"/>
         <image name="welcome-image3" width="316" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

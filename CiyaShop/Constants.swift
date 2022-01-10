@@ -40,7 +40,7 @@ let OAUTH_TOKEN_SECRET_PLUGIN : String = "dBuXY798CWrIh8n8zPpry06YLHu7zV7PztS4kt
 let appURL : String = "https://shop.radugann.com/"
 let PATH : String = appURL + "wp-json/wc/v2/"
 let OTHER_API_PATH : String = appURL + "wp-json/pgs-woo-api/v1/"
-let PLUGIN_VERSION : String = "4.2.0"
+let PLUGIN_VERSION : String = "4.3.0"
 let PURCHASEKEY : String = "valid";
 //==========================================================
 
