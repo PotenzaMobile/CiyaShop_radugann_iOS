@@ -441,10 +441,11 @@ class CartVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         }
         
         for item in arrayData {
-            
+            let comment_data : [String : Any] = ["comments" : item["notes"].stringValue]
             var productParams = [AnyHashable : Any]()
             productParams["product_id"] = item["id"].stringValue
             productParams["quantity"] = item["qty"].int
+            productParams["cart_item_data"] = comment_data
             if item["variation_id"].exists() {
                 productParams["variation_id"] = item["variation_id"].int
             } else {
@@ -461,6 +462,7 @@ class CartVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         var params = [String : Any]()
 
         params["user_id"] = getValueFromLocal(key: USERID_KEY)
+        params["device_token"] = strDeviceToken
         params["cart_items"] = cartParams
         
         CiyaShopAPISecurity.add(toCart: params) { (success, message, responseData) in
