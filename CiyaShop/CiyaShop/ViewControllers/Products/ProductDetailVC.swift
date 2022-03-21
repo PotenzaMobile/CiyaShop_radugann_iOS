@@ -184,6 +184,13 @@ class ProductDetailVC: UIViewController {
         availability = dictProductDetail["in_stock"].boolValue
         arrAttributes = dictProductDetail["attributes"].array ?? []
 
+        
+        if(checkItemExistsInCart(product: dictProductDetail))
+        {
+            dictProductDetail = getCartUpdatedProduct(product: dictProductDetail)
+        }
+        
+        
         setUpCartBuyNowButton(dictproduct:dictProductDetail)
     }
     // MARK: - Cell Register
@@ -507,6 +514,33 @@ extension ProductDetailVC
     }
     @IBAction func btnAddToCartClicked(_ sender: UIButton)
     {
+        
+        var updatedQty = 0.0
+        
+        if(!dictProductDetail["qty"].exists())
+        {
+            updatedQty = dictProductDetail["advanced_qty_step"].doubleValue
+        }else{
+            updatedQty = dictProductDetail["qty"].doubleValue
+        }
+        
+//        if dictProductDetail["manage_stock"].exists()
+//        {
+//            if dictProductDetail["manage_stock"].boolValue
+//            {
+//                if dictProductDetail["stock_quantity"].doubleValue < updatedQty
+//                {
+//                    showToast(message: MCLocalization.string(for: "MaxQuantityAdd") ?? "")
+//                    return
+//                }
+//            }
+//        }
+//
+        
+        dictProductDetail["qty"].doubleValue = updatedQty
+        //updateProductInCart(product: dictProductDetail)
+        //----
+        
         if(dictProductDetail["type"].stringValue == ProductType.grouped.rawValue)
         {
             
@@ -526,7 +560,20 @@ extension ProductDetailVC
         } else {
             if(dictProductDetail["type"].stringValue == ProductType.variable.rawValue)
             {
-                let updatedProduct = getUpdatedProductWithVariation()
+                var updatedProduct = getUpdatedProductWithVariation()
+                
+                //---
+                var updatedQty = 0.0
+                
+                if(!updatedProduct!["qty"].exists())
+                {
+                    updatedQty = updatedProduct!["advanced_qty_step"].doubleValue
+                }else{
+                    updatedQty = updatedProduct!["qty"].doubleValue
+                }
+                updatedProduct!["qty"].doubleValue = updatedQty
+                //---
+                
                 if updatedProduct != nil {
                     if updatedProduct!["manage_stock"].exists() {
                         if updatedProduct!["manage_stock"].boolValue {
@@ -560,6 +607,17 @@ extension ProductDetailVC
     }
     @IBAction func btnBuyNowClicked(_ sender: UIButton)
     {
+        var updatedQty = 0.0
+        
+        if(!dictProductDetail["qty"].exists())
+        {
+            updatedQty = dictProductDetail["advanced_qty_step"].doubleValue
+        }else{
+            updatedQty = dictProductDetail["qty"].doubleValue
+        }
+        
+        dictProductDetail["qty"].doubleValue = updatedQty
+        
         if(dictProductDetail["type"].stringValue == ProductType.grouped.rawValue) {
             arrBuyNow.removeAll()
             
@@ -587,8 +645,20 @@ extension ProductDetailVC
                 if(arrayAllVariations.count > 0)
                 {
                     let product = getUpdatedProductWithVariation()
+                    
+                    var updatedQty = 0.0
+                    
+                    if(!product!["qty"].exists())
+                    {
+                        updatedQty = product!["advanced_qty_step"].doubleValue
+                    }else{
+                        updatedQty = product!["qty"].doubleValue
+                    }
+                    
                     addItemForbuyNow(product: product ?? JSON())
                 }else{
+                    
+                    
                     addItemForbuyNow(product: dictProductDetail)
                 }
                 
@@ -623,8 +693,12 @@ extension ProductDetailVC
         {
             if product["manage_stock"].boolValue
             {
-                if product["stock_quantity"].doubleValue < updatedQty
+                if product["advanced_qty_step"].doubleValue == updatedQty
                 {
+                    
+                }else if(product["stock_quantity"].doubleValue < updatedQty)
+                {
+                   
                     showToast(message: MCLocalization.string(for: "MaxQuantityAdd") ?? "")
                     return
                 }
@@ -653,7 +727,10 @@ extension ProductDetailVC
         {
             if product["manage_stock"].boolValue
             {
-                if product["advanced_qty_step"].doubleValue > updatedQty
+                if product["advanced_qty_step"].doubleValue == updatedQty
+                {
+                    
+                }else if(product["advanced_qty_step"].doubleValue > updatedQty)
                 {
                     showToast(message: MCLocalization.string(for: "MinQuantityAdd") ?? "")
                     return
