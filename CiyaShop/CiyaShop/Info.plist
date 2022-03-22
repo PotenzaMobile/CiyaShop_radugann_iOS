@@ -79,13 +79,13 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Set profile picture using Camera. Please Click “ok” to allow access.</string>
+	<string>Установите изображение профиля с помощью камеры. Пожалуйста, нажмите «ОК», чтобы разрешить доступ.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Allow location permission to get notified with best deal around your location. Please Click “ok” to allow access.</string>
+	<string>Разрешить разрешение на местоположение, чтобы получать уведомления о лучших предложениях в вашем регионе. Пожалуйста, нажмите «ОК», чтобы разрешить доступ.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow location permission to get notified with best deal around your location. Please Click “ok” to allow access.</string>
+	<string>Разрешить разрешение на местоположение, чтобы получать уведомления о лучших предложениях в вашем регионе. Пожалуйста, нажмите «ОК», чтобы разрешить доступ.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Set profile picture using Gallery. Please Click “ok” to allow access.</string>
+	<string>Установите изображение профиля с помощью Галереи. Пожалуйста, нажмите «ОК», чтобы разрешить доступ.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Ubuntu-Medium.ttf</string>
