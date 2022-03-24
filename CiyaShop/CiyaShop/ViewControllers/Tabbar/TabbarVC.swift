@@ -373,6 +373,8 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
             }
         }
         
+        
+        
         // for Catalogue mode
         if (IS_FROM_STATIC_DATA) {
             isCatalogMode = IS_CATALOG_MODE
@@ -384,6 +386,16 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
                     isCatalogMode = false
                 }
             }
+        }
+        
+        if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
+            if userId.isEmpty{
+                isCatalogMode = true
+            }else{
+                isCatalogMode = false
+            }
+        } else {
+            isCatalogMode = true
         }
         
         // for Currency
@@ -492,7 +504,7 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
         
         
         //show welcome screen or login screen
-        if isSliderScreen && (getValueFromLocal(key: WELCOME_KEY) == nil ) {
+       /* if isSliderScreen && (getValueFromLocal(key: WELCOME_KEY) == nil ) {
             let welcomeVC = WelcomeVC(nibName: "WelcomeVC", bundle : nil)
             welcomeVC.modalPresentationStyle = .fullScreen
             self.present(welcomeVC, animated: false, completion: nil)
@@ -509,7 +521,7 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
                     }
                 }
             }
-        }
+        }*/
         
     }
     

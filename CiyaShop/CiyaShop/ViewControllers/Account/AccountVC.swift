@@ -828,7 +828,15 @@ extension AccountVC : UITableViewDelegate,UITableViewDataSource  {
         if isLoginScreen {
             redirectLogin()
         }
-        
+        if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
+            if userId.isEmpty{
+                isCatalogMode = true
+            }else{
+                isCatalogMode = false
+            }
+        } else {
+            isCatalogMode = true
+        }
         
     }
     

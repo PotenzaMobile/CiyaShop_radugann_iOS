@@ -302,6 +302,16 @@ class LoginVC: UIViewController,GIDSignInDelegate, ASAuthorizationControllerPres
                     is_Logged_in = false
                 }
                 
+                if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
+                    if userId.isEmpty{
+                        isCatalogMode = true
+                    }else{
+                        isCatalogMode = false
+                    }
+                } else {
+                    isCatalogMode = true
+                }
+                
             } else {
                 if let message = jsonReponse["message"].string {
                     showCustomAlert(title: APP_NAME,message: message, vc: self)
