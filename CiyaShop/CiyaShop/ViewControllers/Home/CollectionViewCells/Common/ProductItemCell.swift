@@ -124,6 +124,10 @@ class ProductItemCell: UICollectionViewCell {
             self.lblPrice.setPriceForProductItem(str: product["price_html"].stringValue, isOnSale: product["on_sale"].boolValue,product:product)
         }
         
+        
+        
+        
+        
 
         
 //        let regularPric+e = 100.00
@@ -187,6 +191,19 @@ class ProductItemCell: UICollectionViewCell {
         } else {
             self.vwOffer.isHidden = true
         }
+        
+        if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
+            if userId.isEmpty{
+                self.lblPrice.isHidden = true
+                
+            }else{
+                self.lblPrice.isHidden = false
+            }
+        }else{
+            self.lblPrice.isHidden = false
+        }
+        
+        
        
         if isWishList {
             if checkItemExistsInWishlist(productId: product["id"].stringValue) {

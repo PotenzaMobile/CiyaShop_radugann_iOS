@@ -100,6 +100,18 @@ class SpecialDealProductItemCell: UICollectionViewCell {
                 }
             }*/
         }
+        
+        if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
+            if userId.isEmpty{
+                self.lblPrice.isHidden = true
+                
+            }else{
+                self.lblPrice.isHidden = false
+            }
+        }else{
+            self.lblPrice.isHidden = false
+        }
+        
     
         if product["rating"].exists() {
             if product["rating"].stringValue != "" {
