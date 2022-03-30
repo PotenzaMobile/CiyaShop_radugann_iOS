@@ -48,8 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate,UNUserNo
             }
         }
         //onesignal
-        
-        OneSignal.initWithLaunchOptions(launchOptions, appId: "YOUR_ONE_SIGNAL_KEY", handleNotificationAction: nil, settings: [kOSSettingsKeyAutoPrompt : false])
+        //62db38d5-f80d-467b-9459-24241721b48e
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "9c8ba5eb-28cf-4ba5-800f-665b0aa02caf", handleNotificationAction: nil, settings: [kOSSettingsKeyAutoPrompt : false])
         OneSignal.inFocusDisplayType = .notification
         OneSignal.promptForPushNotifications { (accepted) in}
         

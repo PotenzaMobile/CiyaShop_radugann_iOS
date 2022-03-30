@@ -815,7 +815,14 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
     @objc func homeButtonClicked(sender: UIButton) {
         
         if tabController?.selectedIndex == 2 {
-            self.navigationController?.popViewController(animated: true)
+            if let navigations = tabController?.viewControllers {
+                        for item in navigations {
+                            if let navigation = item as? UINavigationController {
+                                navigation.popToRootViewController(animated: false)
+                            }
+                        }
+                    }
+
         } else {
             tabController?.selectedIndex = 2
             self.navigationController?.popToRootViewController(animated: true)
