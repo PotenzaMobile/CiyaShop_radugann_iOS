@@ -374,7 +374,8 @@
         "OrderPlacedFailure" : "ORDEN CANCELADA",
         "OrderPlacedFailureSubMessage" : "Lamentablemente, su pedido no se puede procesar porque el banco / comerciante de origen ha rechazado su transacción.",
         
-        "technicalIssue":"Hay algún problema técnico. Inténtalo después de un tiempo."
+        "technicalIssue":"Hay algún problema técnico. Inténtalo después de un tiempo.",
+        "shopClosed" : "A partir de ahora, la tienda está cerrada, por lo que no se puede realizar una compra :)"
 
     }
 }

@@ -202,22 +202,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E62BA05B-5C9B-41C1-A79F-999E66862F81"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
-            landmarkName = "setCommonHomeAPIData(jsonReponse:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F00EE76C-4D25-4489-B680-A0EC78D29CE5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -307,7 +291,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1455"
             endingLineNumber = "1455"
-            landmarkName = "CheckPinCode()"
+            landmarkName = "GetGroupedProducts()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -323,7 +307,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1446"
             endingLineNumber = "1446"
-            landmarkName = "CheckPinCode()"
+            landmarkName = "GetGroupedProducts()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -369,26 +353,10 @@
             filePath = "CiyaShop/ViewControllers/Home/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "628"
-            endingLineNumber = "628"
+            startingLineNumber = "631"
+            endingLineNumber = "631"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9BEDF172-E1EC-4135-B157-71868FD0D7E6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CiyaShop/Common/productMethods.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "addItemInCart(product:)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -403,7 +371,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "622"
             endingLineNumber = "622"
-            landmarkName = "btnPlusQtyClicked(_:)"
+            landmarkName = "btnBuyNowClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -419,7 +387,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "615"
             endingLineNumber = "615"
-            landmarkName = "btnPlusQtyClicked(_:)"
+            landmarkName = "btnBuyNowClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -451,39 +419,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "605"
             endingLineNumber = "605"
-            landmarkName = "btnPlusQtyClicked(_:)"
+            landmarkName = "btnGoToCartClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8C9027A2-C357-40B9-9399-2F2F0A3989CA"
+            uuid = "F170E659-93B0-4D1F-80FE-C15F30DD089D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CiyaShop/ViewControllers/Cart/CartVC.swift"
+            filePath = "CiyaShop/ViewControllers/Login/LoginVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "443"
-            endingLineNumber = "443"
-            landmarkName = "addToCartData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "62533F63-DB46-4AD3-A58B-0B1E0693B624"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CiyaShop/ViewControllers/Cart/CartVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "466"
-            endingLineNumber = "466"
-            landmarkName = "addToCartData()"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "btnLoginClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

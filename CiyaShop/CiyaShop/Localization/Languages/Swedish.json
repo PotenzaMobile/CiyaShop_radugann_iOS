@@ -373,7 +373,8 @@
         "OrderPlacedFailure" : "BESTÄLLNING AVBRYT",
         "OrderPlacedFailureSubMessage" : "Tyvärr kan din beställning inte behandlas eftersom den ursprungliga banken/säljaren har tackat nej till din transaktion.",
         
-        "technicalIssue":"Det finns tekniskt problem. Försök efter en tid."
+        "technicalIssue":"Det finns tekniskt problem. Försök efter en tid.",
+        "shopClosed" : "Från och med nu är butiken stängd så du kan inte göra ett köp :)"
         
         
     }

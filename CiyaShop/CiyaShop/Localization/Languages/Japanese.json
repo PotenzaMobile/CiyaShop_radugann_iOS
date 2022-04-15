@@ -372,7 +372,8 @@
         "OrderPlacedFailure" : "注文はキャンセルされました",
         "OrderPlacedFailureSubMessage" : "残念ながら、元の銀行/販売者が取引を拒否したため、注文を処理できません。",
         
-        "technicalIssue":"技術的な問題があります。しばらくしてからお試しください。"
+        "technicalIssue":"技術的な問題があります。しばらくしてからお試しください。",
+        "shopClosed" : "現在、お店は休業しておりますのでご購入いただけません:)"
         
     }
 }

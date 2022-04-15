@@ -78,7 +78,9 @@ class HomeVC: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        if !isOpen{
+            showToast(message: getLocalizationString(key: "shopClosed"))
+        }
         setHeaderImage()
         setupRefreshControl()
         if isInfiniteHomeScreen {
@@ -104,6 +106,7 @@ class HomeVC: UIViewController {
             receivedNotification = JSON()
         }
         
+  
     }
     
     override func viewWillAppear(_ animated: Bool) {

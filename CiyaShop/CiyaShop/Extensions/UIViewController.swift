@@ -14,7 +14,7 @@ import CiyaShopSecurityFramework
 extension UIViewController {
 
     func showToast(message : String) {
-        let toastLabel = UILabel(frame: CGRect(x: 20, y: self.view.frame.size.height-70, width: screenWidth - 40, height: 35))
+        let toastLabel = UILabel(frame: CGRect(x: 20, y: screenHeight-130, width: screenWidth - 40, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white
         toastLabel.font = UIFont.appRegularFontName(size: fontSize12)

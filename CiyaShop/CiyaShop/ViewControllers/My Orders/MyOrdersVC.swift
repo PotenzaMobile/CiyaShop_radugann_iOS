@@ -160,27 +160,27 @@ class MyOrdersVC: UIViewController,OrderDetailDelegate {
         print(params)
         
         CiyaShopAPISecurity.getOrders(params) { (success, message, responseData) in
-            
+   
             let jsonReponse = JSON(responseData!)
             if success {
         
-                if(jsonReponse["status"].stringValue != kSuccess){
-                    if self.page == 1 {
-                        hideLoader()
-                        self.vwNoOrderFound.isHidden = false
-                        self.cvMyOrders.isHidden = true
-                        return
-                    }
-                    
-                }
+//                if(jsonReponse["status"].stringValue != kSuccess){
+//                    if self.page == 1 {
+//                        hideLoader()
+//                        self.vwNoOrderFound.isHidden = false
+//                        self.cvMyOrders.isHidden = true
+//                        return
+//                    }
+//
+//                }
                 
                 if self.page == 1 {
-                    self.arrMyOrdersData = jsonReponse.array!
+                    self.arrMyOrdersData = jsonReponse.array ?? []
                 } else {
-                    self.arrMyOrdersData.append(contentsOf: jsonReponse.array!)
+                    self.arrMyOrdersData.append(contentsOf: jsonReponse.array ?? [])
                 }
                 
-                if jsonReponse.array!.count < 10 {
+                if (jsonReponse.array?.count ?? 0) < 10 {
                     self.isNoProductFound = true
                 }
                 
@@ -194,7 +194,7 @@ class MyOrdersVC: UIViewController,OrderDetailDelegate {
                 self.isLoading = false
                 
             } else {
-                if(jsonReponse["status"].stringValue == kSuccess){
+                //if(jsonReponse["status"].stringValue == kSuccess){
                     
                     if self.page == 1 {
                         hideLoader()
@@ -214,15 +214,15 @@ class MyOrdersVC: UIViewController,OrderDetailDelegate {
                             showCustomAlert(title: APP_NAME,message: getLocalizationString(key: "technicalIssue"), vc: self)
                         }
                     }
-                } else{
-//                    self.showToast(message: jsonReponse["message"].stringValue)
-                    
-                    if self.page == 1 {
-                        hideLoader()
-                        self.vwNoOrderFound.isHidden = false
-                        self.cvMyOrders.isHidden = true
-                    }
-                }
+//                } else{
+////                    self.showToast(message: jsonReponse["message"].stringValue)
+//
+//                    if self.page == 1 {
+//                        hideLoader()
+//                        self.vwNoOrderFound.isHidden = false
+//                        self.cvMyOrders.isHidden = true
+//                    }
+//                }
                 
                 
             }
@@ -293,6 +293,7 @@ extension MyOrdersVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyOrderCell", for: indexPath) as! MyOrderCell
+        print(arrMyOrdersData[indexPath.row])
         cell.setProductData(orderDetail: arrMyOrdersData[indexPath.row])
         
         

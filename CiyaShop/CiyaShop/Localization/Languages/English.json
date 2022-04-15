@@ -378,6 +378,7 @@
         "technicalIssue":"There is some technical problem. Please try after some time.",
         
         "Price":"Price",
-        "Continue":"Continue"
+        "Continue":"Continue",
+        "shopClosed" : "As of now, the shop is closed hence you cannot make a purchase :)"
     }
 }

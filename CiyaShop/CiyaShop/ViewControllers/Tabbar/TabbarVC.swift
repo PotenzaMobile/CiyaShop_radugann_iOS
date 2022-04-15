@@ -69,8 +69,8 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
             let jsonReponse = JSON(responseData!)
             print("Home data - ",jsonReponse)
             if success && (responseData! as AnyObject).count > 0 {
-                
-                
+                let json = JSON(responseData!)
+                isOpen = (json["store_openclose"].string == "open") ? true : false
                 self.setCommonHomeAPIData(jsonReponse: jsonReponse)
                 self.setHomeAPIData(jsonReponse: jsonReponse)
                 self.createTabbar()
@@ -397,6 +397,9 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
         } else {
             isCatalogMode = true
         }
+        
+        
+        isCatalogMode = isOpen ? false : true
         
         // for Currency
         if let dictCurrency = jsonReponse["currency_switcher"].dictionary {

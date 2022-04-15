@@ -376,6 +376,7 @@
         "OrderPlacedFailure" : "COMMANDE ANNULÉE",
         "OrderPlacedFailureSubMessage" : "Malheureusement, votre commande ne peut pas être traitée car la banque/le commerçant d'origine a refusé votre transaction.",
         
-        "technicalIssue":"Il y a un problème technique. Veuillez essayer après un certain temps."
+        "technicalIssue":"Il y a un problème technique. Veuillez essayer après un certain temps.",
+        "shopClosed" : "Pour l'instant, la boutique est fermée donc vous ne pouvez pas faire d'achat :)"
     }
 }

@@ -373,7 +373,7 @@
         "OrderPlacedFailureSubMessage" : "Leider kann Ihre Bestellung nicht bearbeitet werden, da die ursprüngliche Bank/der Händler Ihre Transaktion abgelehnt hat.",
         
         
-        "technicalIssue":"Es gibt ein technisches Problem. Bitte versuchen Sie es nach einiger Zeit."
-
+        "technicalIssue":"Es gibt ein technisches Problem. Bitte versuchen Sie es nach einiger Zeit.",
+        "shopClosed" : "Ab sofort ist der Shop geschlossen, daher können Sie keinen Einkauf tätigen :)"
     }
 }
