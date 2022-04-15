@@ -24,6 +24,9 @@ extension UIViewController {
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
         toastLabel.layer.masksToBounds = true
+        toastLabel.numberOfLines = 0
+        toastLabel.lineBreakMode = .byWordWrapping
+        toastLabel.sizeToFit()
 //        keyWindow?.rootViewController?.view.addSubview(toastLabel)
         self.view.addSubview(toastLabel)
         
