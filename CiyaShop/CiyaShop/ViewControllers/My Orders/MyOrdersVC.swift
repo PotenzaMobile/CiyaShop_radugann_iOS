@@ -164,15 +164,14 @@ class MyOrdersVC: UIViewController,OrderDetailDelegate {
             let jsonReponse = JSON(responseData!)
             if success {
         
-//                if(jsonReponse["status"].stringValue != kSuccess){
-//                    if self.page == 1 {
-//                        hideLoader()
-//                        self.vwNoOrderFound.isHidden = false
-//                        self.cvMyOrders.isHidden = true
-//                        return
-//                    }
-//
-//                }
+                if(jsonReponse.array?.count == 0){
+                    if self.page == 1 {
+                        hideLoader()
+                        self.vwNoOrderFound.isHidden = false
+                        self.cvMyOrders.isHidden = true
+                        return
+                    }
+                }
                 
                 if self.page == 1 {
                     self.arrMyOrdersData = jsonReponse.array ?? []

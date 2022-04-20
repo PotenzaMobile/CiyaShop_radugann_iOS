@@ -186,14 +186,18 @@ class BannersAdsCell: UITableViewCell, UICollectionViewDelegate,UICollectionView
         
         
         let dict = arrBannersAd[indexPath.row]
-        
-//
-        
         let subcategories =  arrAllCategories.filter({$0["parent"].stringValue == dict["banner_ad_cat_id"].stringValue})
-        
-        if subcategories.count > 0 {
+        var categoryWithProduct = subcategories
+        categoryWithProduct.removeAll()
+        subcategories.forEach{ (category) in
+            if category["product_count"].intValue > 0{
+                categoryWithProduct.append(category)
+            }
+        }
+        print(categoryWithProduct)
+        if categoryWithProduct.count > 0 {
             let subCategoryVC = SubCategoryVC(nibName: "SubCategoryVC", bundle: nil)
-            subCategoryVC.arrSubcategories = subcategories
+            subCategoryVC.arrSubcategories = categoryWithProduct
             self.parentContainerViewController()?.navigationController?.pushViewController(subCategoryVC, animated: true)
             
         } else {

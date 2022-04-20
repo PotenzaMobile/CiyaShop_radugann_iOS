@@ -143,10 +143,18 @@ class TopCategoriesCell: UITableViewCell, UICollectionViewDelegate,UICollectionV
         
         
         let subcategories =  arrAllCategories.filter({$0["parent"].stringValue == category["main_cat_id"].stringValue})
-        
+
+        var categoryWithProduct = subcategories
+        categoryWithProduct.removeAll()
+        subcategories.forEach{ (category) in
+            if category["product_count"].intValue > 0{
+                categoryWithProduct.append(category)
+            }
+        }
+        print(categoryWithProduct)
         if subcategories.count > 0 {
             let subCategoryVC = SubCategoryVC(nibName: "SubCategoryVC", bundle: nil)
-            subCategoryVC.arrSubcategories = subcategories
+            subCategoryVC.arrSubcategories = categoryWithProduct
             self.parentContainerViewController()?.navigationController?.pushViewController(subCategoryVC, animated: true)
             
         } else {
