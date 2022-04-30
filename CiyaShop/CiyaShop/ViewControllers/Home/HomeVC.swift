@@ -496,8 +496,10 @@ class HomeVC: UIViewController {
     
     
     @IBAction func btnNotificationClicked(_ sender: Any) {
-        let notificationsVC = NotificationsVC(nibName: "NotificationsVC", bundle: nil)
-        self.navigationController?.pushViewController(notificationsVC, animated: true)
+//        let notificationsVC = NotificationsVC(nibName: "NotificationsVC", bundle: nil)
+//        self.navigationController?.pushViewController(notificationsVC, animated: true)
+        let newsVC = NewsVC(nibName: "NewsVC", bundle: nil)
+        self.navigationController?.pushViewController(newsVC, animated: true)
     }
     
     // MARK: - Themes Methods

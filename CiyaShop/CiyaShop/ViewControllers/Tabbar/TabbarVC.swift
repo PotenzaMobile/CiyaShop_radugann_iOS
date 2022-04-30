@@ -9,6 +9,7 @@
 import UIKit
 import CiyaShopSecurityFramework
 import SwiftyJSON
+import Alamofire
 
 var tabController : UITabBarController?
 
@@ -37,7 +38,61 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
             getHomeScrollingData()
         }
     }
+    func checkVersionUpdate()
+    {
+        if(isFirstTimeLoad)
+        {
+            isFirstTimeLoad = false
+            checkAppStore() { isNew, version in
+                print("IS NEW VERSION AVAILABLE: \(isNew), APP STORE VERSION: \(version)")
+//                if(isNew!)
+//                {
+//                    self.showUpdatePopUp()
+//                }
+//
+                }
+        }
+    }
     
+    func checkAppStore(callback: ((_ versionAvailable: Bool?, _ version: String?)->Void)? = nil) {
+            let ourBundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
+            Alamofire.request("https://itunes.apple.com/lookup?bundleId=\(ourBundleId)").responseJSON { response in
+                var isNew: Bool?
+                var versionStr: String?
+
+                if let json = response.result.value as? NSDictionary,
+                   let results = json["results"] as? NSArray,
+                   let entry = results.firstObject as? NSDictionary,
+                   let appVersion = entry["version"] as? String,
+                   let ourVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+                {
+                    isNew = ourVersion != appVersion
+                    versionStr = appVersion
+                }
+
+//                self.appStoreVersion = versionStr
+//                self.newVersionAvailable = isNew
+                callback?(isNew, versionStr)
+            }
+        }
+    
+    
+    //MARK:-
+    func showUpdatePopUp()
+    {
+//
+        
+        let vc = Bundle.main.loadNibNamed("VersionVC", owner: self, options: nil)?.first as! VersionVC
+        vc.frame = self.view.bounds
+        self.view.addSubview(vc)
+//        addAlertAnimation(view: vc, blurView: vc.blurView)
+        
+//        let vc = VersionVC(nibName: "VersionVC", bundle: nil)
+//        self.present(vc, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
     // MARK: - APIs Caling
     
     func getHomeScrollingData() {
@@ -71,6 +126,7 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
             if success && (responseData! as AnyObject).count > 0 {
                 let json = JSON(responseData!)
                 isOpen = (json["store_openclose"].string == "open") ? true : false
+                self.checkVersionUpdate()
                 self.setCommonHomeAPIData(jsonReponse: jsonReponse)
                 self.setHomeAPIData(jsonReponse: jsonReponse)
                 self.createTabbar()

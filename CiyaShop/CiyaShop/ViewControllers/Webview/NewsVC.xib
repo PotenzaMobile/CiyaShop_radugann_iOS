@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsVC" customModule="CiyaShop" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBack" destination="ADC-fl-rAs" id="vVr-Bi-tsy"/>
+                <outlet property="lblHeaderTitle" destination="ZRG-a2-QF6" id="5mV-7e-lY2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wkWebView" destination="eJD-Mf-R4i" id="sKi-u6-N3a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXS-yU-xPt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADC-fl-rAs">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="2n3-hy-nLO"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="darkTextColor"/>
+                            <state key="normal" image="back-arrow-icon"/>
+                            <connections>
+                                <action selector="btnBackAction:" destination="-1" eventType="touchUpInside" id="r3x-1E-e15"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRG-a2-QF6">
+                            <rect key="frame" x="173" y="11.5" width="68" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ADC-fl-rAs" firstAttribute="top" secondItem="qXS-yU-xPt" secondAttribute="top" id="Am6-Q4-Q8X"/>
+                        <constraint firstAttribute="height" constant="44" id="MBD-lf-3Kp"/>
+                        <constraint firstAttribute="bottom" secondItem="ADC-fl-rAs" secondAttribute="bottom" id="QR3-xB-pyb"/>
+                        <constraint firstItem="ZRG-a2-QF6" firstAttribute="centerY" secondItem="qXS-yU-xPt" secondAttribute="centerY" id="RMK-H3-A3x"/>
+                        <constraint firstItem="ZRG-a2-QF6" firstAttribute="centerX" secondItem="qXS-yU-xPt" secondAttribute="centerX" id="TT0-K6-jod"/>
+                        <constraint firstItem="ADC-fl-rAs" firstAttribute="leading" secondItem="qXS-yU-xPt" secondAttribute="leading" id="l6z-xO-TYD"/>
+                    </constraints>
+                </view>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-Mf-R4i">
+                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="eJD-Mf-R4i" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="1RZ-sA-8y5"/>
+                <constraint firstItem="eJD-Mf-R4i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6fF-8u-Qzy"/>
+                <constraint firstItem="qXS-yU-xPt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9hu-Dh-KJJ"/>
+                <constraint firstAttribute="trailing" secondItem="qXS-yU-xPt" secondAttribute="trailing" id="RsT-NR-XC5"/>
+                <constraint firstItem="eJD-Mf-R4i" firstAttribute="top" secondItem="qXS-yU-xPt" secondAttribute="bottom" id="Tvb-o2-U1A"/>
+                <constraint firstItem="eJD-Mf-R4i" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="aV2-eP-qcS"/>
+                <constraint firstItem="qXS-yU-xPt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="c5w-sz-pl1"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="98.4375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back-arrow-icon" width="22" height="22"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

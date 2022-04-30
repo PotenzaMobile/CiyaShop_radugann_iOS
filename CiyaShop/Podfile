@@ -33,6 +33,7 @@ target 'CiyaShop' do
 #      pod 'ListPlaceholder'
 #      pod 'Shimmer'
       pod 'lottie-ios'
+      pod 'Alamofire'
 
       target 'NotificationService' do
           pod 'OneSignal', '>= 2.11.2', '< 3.0'

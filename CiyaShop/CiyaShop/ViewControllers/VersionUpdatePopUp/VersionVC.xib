@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="VersionVC" customModule="CiyaShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIZ-qt-s04">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXm-iJ-DmZ">
+                    <rect key="frame" x="40" y="332.5" width="334" height="241.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxm-Rl-B6y">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обновить приложение" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJ6-Rc-v4B">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="9uE-Md-3V4"/>
+                                <constraint firstAttribute="trailing" secondItem="WJ6-Rc-v4B" secondAttribute="trailing" id="MQC-1H-4TP"/>
+                                <constraint firstItem="WJ6-Rc-v4B" firstAttribute="top" secondItem="Wxm-Rl-B6y" secondAttribute="top" id="NRM-R9-wTF"/>
+                                <constraint firstItem="WJ6-Rc-v4B" firstAttribute="leading" secondItem="Wxm-Rl-B6y" secondAttribute="leading" id="jbA-QI-S7L"/>
+                                <constraint firstAttribute="bottom" secondItem="WJ6-Rc-v4B" secondAttribute="bottom" id="lce-bW-tdS"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новая версия этого приложения доступна в магазине Play. Нажмите «Обновить», чтобы установить обновленное приложение." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLf-jO-3gy">
+                            <rect key="frame" x="20" y="70" width="294" height="81.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="aJt-DN-rpY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HSO-2j-bdh">
+                            <rect key="frame" x="10" y="181.5" width="314" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4po-oi-A8a">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                    <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Обновлять"/>
+                                    <connections>
+                                        <action selector="btnUpdateAction:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="u1g-ay-jPO"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="xiX-Ur-FAB"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="HSO-2j-bdh" secondAttribute="bottom" constant="10" id="4DH-MD-0xt"/>
+                        <constraint firstItem="Wxm-Rl-B6y" firstAttribute="leading" secondItem="uXm-iJ-DmZ" secondAttribute="leading" id="EPq-9R-71U"/>
+                        <constraint firstItem="HSO-2j-bdh" firstAttribute="leading" secondItem="uXm-iJ-DmZ" secondAttribute="leading" constant="10" id="NqS-rG-m6t"/>
+                        <constraint firstAttribute="trailing" secondItem="Wxm-Rl-B6y" secondAttribute="trailing" id="bxX-iY-sgu"/>
+                        <constraint firstItem="eLf-jO-3gy" firstAttribute="top" secondItem="Wxm-Rl-B6y" secondAttribute="bottom" constant="20" id="cuc-OE-uFZ"/>
+                        <constraint firstItem="eLf-jO-3gy" firstAttribute="leading" secondItem="uXm-iJ-DmZ" secondAttribute="leading" constant="20" id="qRg-oz-7ug"/>
+                        <constraint firstItem="HSO-2j-bdh" firstAttribute="top" secondItem="eLf-jO-3gy" secondAttribute="bottom" constant="30" id="tzS-Gw-syt"/>
+                        <constraint firstItem="Wxm-Rl-B6y" firstAttribute="top" secondItem="uXm-iJ-DmZ" secondAttribute="top" id="ub3-PO-bPh"/>
+                        <constraint firstAttribute="trailing" secondItem="HSO-2j-bdh" secondAttribute="trailing" constant="10" id="w4Z-xh-yhg"/>
+                        <constraint firstAttribute="trailing" secondItem="eLf-jO-3gy" secondAttribute="trailing" constant="20" id="xAB-a4-yn8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KIZ-qt-s04" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CQd-O6-DtZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KIZ-qt-s04" secondAttribute="trailing" id="Jes-7b-o17"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uXm-iJ-DmZ" secondAttribute="trailing" constant="40" id="Ypt-9g-e4s"/>
+                <constraint firstAttribute="bottom" secondItem="KIZ-qt-s04" secondAttribute="bottom" id="jjG-q7-3aM"/>
+                <constraint firstItem="uXm-iJ-DmZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="om5-CM-Oay"/>
+                <constraint firstItem="KIZ-qt-s04" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="shN-Uf-CNV"/>
+                <constraint firstItem="uXm-iJ-DmZ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="spt-8a-2JX"/>
+            </constraints>
+            <connections>
+                <outlet property="btnUpdate" destination="4po-oi-A8a" id="IuD-nl-4CB"/>
+                <outlet property="lblHeading" destination="WJ6-Rc-v4B" id="7H9-8f-BRW"/>
+                <outlet property="lblVersion" destination="eLf-jO-3gy" id="wf4-b3-iim"/>
+                <outlet property="vwHeader" destination="Wxm-Rl-B6y" id="jkI-UM-Ytz"/>
+                <outlet property="vwParent" destination="uXm-iJ-DmZ" id="Ilk-Jj-wex"/>
+            </connections>
+            <point key="canvasLocation" x="101" y="118"/>
+        </view>
+    </objects>
+</document>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -29,7 +30,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="VI7-Pv-Uda"/>
                             </constraints>
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="tintColor" systemColor="darkTextColor"/>
                             <state key="normal" image="back-arrow-icon"/>
                             <connections>
                                 <action selector="btnBackClicked:" destination="-1" eventType="touchUpInside" id="wIe-pt-QmC"/>
@@ -63,7 +64,8 @@
                     </wkWebViewConfiguration>
                 </wkWebView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="mC9-UV-81O" firstAttribute="top" secondItem="0oN-pD-ZIk" secondAttribute="bottom" id="2dd-G7-euA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mC9-UV-81O" secondAttribute="trailing" id="7cV-Km-2Fq"/>
@@ -73,12 +75,17 @@
                 <constraint firstItem="0oN-pD-ZIk" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fil-no-5Vb"/>
                 <constraint firstItem="mC9-UV-81O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jUA-mc-AgW"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-666" y="-145"/>
         </view>
     </objects>
     <resources>
-        <image name="appLogo" width="120" height="28"/>
+        <image name="appLogo" width="137" height="44"/>
         <image name="back-arrow-icon" width="22" height="22"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

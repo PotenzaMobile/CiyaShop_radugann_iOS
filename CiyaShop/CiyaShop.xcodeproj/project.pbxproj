@@ -264,6 +264,10 @@
 		18D7AE33250F16C3001722EF /* MCAutolocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7AE2F250F16C3001722EF /* MCAutolocalizedLabel.swift */; };
 		18D7AE34250F16C3001722EF /* MCLocalization+Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7AE30250F16C3001722EF /* MCLocalization+Localizer.swift */; };
 		18D7AE35250F16C3001722EF /* MCLocalizationProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7AE31250F16C3001722EF /* MCLocalizationProviders.swift */; };
+		18DED4C3281CECE300A24977 /* VersionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DED4C1281CECE300A24977 /* VersionVC.swift */; };
+		18DED4C4281CECE300A24977 /* VersionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DED4C2281CECE300A24977 /* VersionVC.xib */; };
+		18DED4C7281CF16500A24977 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DED4C5281CF16500A24977 /* NewsVC.swift */; };
+		18DED4C8281CF16500A24977 /* NewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DED4C6281CF16500A24977 /* NewsVC.xib */; };
 		18E511F925639EBA00FC5284 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E511F825639EBA00FC5284 /* LocationHelper.swift */; };
 		18E511FB25639EE600FC5284 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E511FA25639EE600FC5284 /* CoreLocation.framework */; };
 		18E87F9D2542AB2F00D9B9D9 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87F9B2542AB2F00D9B9D9 /* PreviewVC.swift */; };
@@ -619,6 +623,10 @@
 		18D7AE2F250F16C3001722EF /* MCAutolocalizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCAutolocalizedLabel.swift; sourceTree = "<group>"; };
 		18D7AE30250F16C3001722EF /* MCLocalization+Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MCLocalization+Localizer.swift"; sourceTree = "<group>"; };
 		18D7AE31250F16C3001722EF /* MCLocalizationProviders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCLocalizationProviders.swift; sourceTree = "<group>"; };
+		18DED4C1281CECE300A24977 /* VersionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionVC.swift; sourceTree = "<group>"; };
+		18DED4C2281CECE300A24977 /* VersionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VersionVC.xib; sourceTree = "<group>"; };
+		18DED4C5281CF16500A24977 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		18DED4C6281CF16500A24977 /* NewsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsVC.xib; sourceTree = "<group>"; };
 		18E511F825639EBA00FC5284 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		18E511FA25639EE600FC5284 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		18E87F9B2542AB2F00D9B9D9 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
@@ -862,6 +870,8 @@
 				1813EF032554F651001D4D73 /* WebviewCheckoutVC.xib */,
 				181AD1262596F8B900F79FAD /* WebviewVC.swift */,
 				181AD1272596F8B900F79FAD /* WebviewVC.xib */,
+				18DED4C5281CF16500A24977 /* NewsVC.swift */,
+				18DED4C6281CF16500A24977 /* NewsVC.xib */,
 			);
 			path = Webview;
 			sourceTree = "<group>";
@@ -1022,6 +1032,7 @@
 		184875CE250935BF00B8F8A6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18DED4C0281CECE300A24977 /* VersionUpdatePopUp */,
 				185364B4270355D8008D9C68 /* Wallet */,
 				18703A07253EBFE40090B94F /* Notification */,
 				18703A08253EBFE40090B94F /* TermsAndPolicy */,
@@ -1652,6 +1663,15 @@
 			path = MCLocalization;
 			sourceTree = "<group>";
 		};
+		18DED4C0281CECE300A24977 /* VersionUpdatePopUp */ = {
+			isa = PBXGroup;
+			children = (
+				18DED4C1281CECE300A24977 /* VersionVC.swift */,
+				18DED4C2281CECE300A24977 /* VersionVC.xib */,
+			);
+			path = VersionUpdatePopUp;
+			sourceTree = "<group>";
+		};
 		18E511F725639E8800FC5284 /* LocationHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -2038,6 +2058,7 @@
 				181AA6D9250B27CD001083E0 /* Layer 4.png in Resources */,
 				181AA6E0250B27CD001083E0 /* Layer 13.png in Resources */,
 				1850367825308FC6007C501F /* NoAddressesCell.xib in Resources */,
+				18DED4C8281CF16500A24977 /* NewsVC.xib in Resources */,
 				18EDAB2B2536F78C009ACBE5 /* ReviewTableViewCell.xib in Resources */,
 				18C7DD63253217A000B83C97 /* AccountSettingVC.xib in Resources */,
 				181AA6DD250B27CD001083E0 /* Layer 3.png in Resources */,
@@ -2075,6 +2096,7 @@
 				18E9CA8A253462250080EC63 /* SizeColorCollectionViewCell.xib in Resources */,
 				181AA6F2250B387B001083E0 /* Ubuntu-Medium.ttf in Resources */,
 				181AA6D0250B27CD001083E0 /* Layer 18.png in Resources */,
+				18DED4C4281CECE300A24977 /* VersionVC.xib in Resources */,
 				1803C7192704861800186E94 /* WalletTransactionTableViewCell.xib in Resources */,
 				181AA6CA250B27CD001083E0 /* Layer 26.png in Resources */,
 				1813EF0925559191001D4D73 /* ThankyouVC.xib in Resources */,
@@ -2341,6 +2363,7 @@
 				18FB5FBF251F1657009F0EED /* FeatureProductCell.swift in Sources */,
 				18EDAB1B2536CE3F009ACBE5 /* SellerInfoTableViewCell.swift in Sources */,
 				18E9FA7125467BEE00070DF2 /* ProductListItemCell.swift in Sources */,
+				18DED4C7281CF16500A24977 /* NewsVC.swift in Sources */,
 				1856C25A25505F38005065A4 /* NSCalendar+Timepiece.swift in Sources */,
 				181AD1282596F8BA00F79FAD /* WebviewVC.swift in Sources */,
 				18105F582558ED4A0098707E /* SubCategoryVC.swift in Sources */,
@@ -2356,6 +2379,7 @@
 				180078EA25205EB7000F616D /* FeatureBoxItemCell.swift in Sources */,
 				187E16682552ED1E00DE82A0 /* DownloadCell.swift in Sources */,
 				185D2E4D251CB7C6005391EB /* TopCategoriesCell.swift in Sources */,
+				18DED4C3281CECE300A24977 /* VersionVC.swift in Sources */,
 				18A6CF10250CA22000F07FAC /* AccountVC.swift in Sources */,
 				181AA6EC250B2C1A001083E0 /* Font.swift in Sources */,
 				180D710A2549A73100ADA240 /* VerificationCodeVC.swift in Sources */,
@@ -2575,7 +2599,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CiyaShop/CiyaShop.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 96UZ2428N8;
@@ -2591,11 +2615,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.radugann.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Radugan_Distribution_6Dec;
+				PROVISIONING_PROFILE_SPECIFIER = Radugann_Development_14Dec;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
@@ -2609,7 +2633,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CiyaShop/CiyaShop.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 96UZ2428N8;
@@ -2625,11 +2649,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.radugann.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Radugan_Distribution_6Dec;
+				PROVISIONING_PROFILE_SPECIFIER = Radugann_Development_14Dec;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
@@ -2640,7 +2664,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AAA44E27D42532E8CA9BAA1E /* Pods-CiyaShop-NotificationService.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 96UZ2428N8;
@@ -2653,11 +2677,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.radugann.app.CiyaShopNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Radugan_Notification_Distribution_6Dec;
+				PROVISIONING_PROFILE_SPECIFIER = Radugann_Notification_Developmetn_14dec;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2669,7 +2693,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F10C42A8E1B4CC5EFB055D85 /* Pods-CiyaShop-NotificationService.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 96UZ2428N8;
@@ -2682,11 +2706,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.radugann.app.CiyaShopNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Radugan_Notification_Distribution_6Dec;
+				PROVISIONING_PROFILE_SPECIFIER = Radugann_Notification_Developmetn_14dec;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
