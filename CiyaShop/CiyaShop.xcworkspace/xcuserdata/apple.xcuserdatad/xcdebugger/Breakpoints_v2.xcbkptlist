@@ -426,22 +426,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4236FEA7-4B9C-4B49-BD3D-61470E731048"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "checkAppStore(callback:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C368B0CD-C13A-4D1C-8D9E-400C7624EC9B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -449,9 +433,9 @@
             filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "checkAppStore(callback:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "checkAppStore()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -465,9 +449,9 @@
             filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "checkAppStore(callback:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "checkAppStore()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -481,9 +465,9 @@
             filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "checkAppStore(callback:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "checkAppStore()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -497,9 +481,9 @@
             filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "checkAppStore(callback:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "checkAppStore()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -513,9 +497,9 @@
             filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "checkAppStore(callback:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "checkAppStore()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -529,9 +513,9 @@
             filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "checkAppStore(callback:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "checkAppStore()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -545,8 +529,24 @@
             filePath = "CiyaShop/ViewControllers/Tabbar/TabbarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "checkAppStore()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51159411-D70F-4014-A723-EAAA433C4BE0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CiyaShop/ViewControllers/VersionUpdatePopUp/VersionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "checkAppStore(callback:)"
             landmarkType = "7">
          </BreakpointContent>

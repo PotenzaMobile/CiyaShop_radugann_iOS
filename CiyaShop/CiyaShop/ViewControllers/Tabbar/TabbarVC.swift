@@ -43,7 +43,8 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
         if(isFirstTimeLoad)
         {
             isFirstTimeLoad = false
-            checkAppStore() { isNew, version in
+            checkAppStore()
+            { isNew, version in
                 print("IS NEW VERSION AVAILABLE: \(isNew), APP STORE VERSION: \(version)")
 //                if(isNew!)
 //                {
@@ -57,6 +58,7 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
     func checkAppStore(callback: ((_ versionAvailable: Bool?, _ version: String?)->Void)? = nil) {
             let ourBundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
             Alamofire.request("https://itunes.apple.com/lookup?bundleId=\(ourBundleId)").responseJSON { response in
+                print("response - ", response)
                 var isNew: Bool?
                 var versionStr: String?
 
