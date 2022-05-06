@@ -38,45 +38,45 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
             getHomeScrollingData()
         }
     }
-    func checkVersionUpdate()
-    {
-        if(isFirstTimeLoad)
-        {
-            isFirstTimeLoad = false
-            checkAppStore()
-            { isNew, version in
-                print("IS NEW VERSION AVAILABLE: \(isNew), APP STORE VERSION: \(version)")
-//                if(isNew!)
+//    func checkVersionUpdate()
+//    {
+//        if(isFirstTimeLoad)
+//        {
+//            isFirstTimeLoad = false
+//            checkAppStore()
+//            { isNew, version in
+//                print("IS NEW VERSION AVAILABLE: \(isNew), APP STORE VERSION: \(version)")
+////                if(isNew!)
+////                {
+////                    self.showUpdatePopUp()
+////                }
+////
+//                }
+//        }
+//    }
+    
+//    func checkAppStore(callback: ((_ versionAvailable: Bool?, _ version: String?)->Void)? = nil) {
+//            let ourBundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
+//            Alamofire.request("https://itunes.apple.com/lookup?bundleId=\(ourBundleId)").responseJSON { response in
+//                print("response - ", response)
+//                var isNew: Bool?
+//                var versionStr: String?
+//
+//                if let json = response.result.value as? NSDictionary,
+//                   let results = json["results"] as? NSArray,
+//                   let entry = results.firstObject as? NSDictionary,
+//                   let appVersion = entry["version"] as? String,
+//                   let ourVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 //                {
-//                    self.showUpdatePopUp()
+//                    isNew = ourVersion != appVersion
+//                    versionStr = appVersion
 //                }
 //
-                }
-        }
-    }
-    
-    func checkAppStore(callback: ((_ versionAvailable: Bool?, _ version: String?)->Void)? = nil) {
-            let ourBundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
-            Alamofire.request("https://itunes.apple.com/lookup?bundleId=\(ourBundleId)").responseJSON { response in
-                print("response - ", response)
-                var isNew: Bool?
-                var versionStr: String?
-
-                if let json = response.result.value as? NSDictionary,
-                   let results = json["results"] as? NSArray,
-                   let entry = results.firstObject as? NSDictionary,
-                   let appVersion = entry["version"] as? String,
-                   let ourVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-                {
-                    isNew = ourVersion != appVersion
-                    versionStr = appVersion
-                }
-
-//                self.appStoreVersion = versionStr
-//                self.newVersionAvailable = isNew
-                callback?(isNew, versionStr)
-            }
-        }
+////                self.appStoreVersion = versionStr
+////                self.newVersionAvailable = isNew
+//                callback?(isNew, versionStr)
+//            }
+//        }
     
     
     //MARK:-
@@ -128,7 +128,7 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
             if success && (responseData! as AnyObject).count > 0 {
                 let json = JSON(responseData!)
                 isOpen = (json["store_openclose"].string == "open") ? true : false
-                self.checkVersionUpdate()
+//                self.checkVersionUpdate()
                 self.setCommonHomeAPIData(jsonReponse: jsonReponse)
                 self.setHomeAPIData(jsonReponse: jsonReponse)
                 self.createTabbar()

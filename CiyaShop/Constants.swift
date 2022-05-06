@@ -26,7 +26,6 @@ let APP_NAME = "Radugann" //Place your app name here
 var isOpen = false
 var strDeviceToken = ""
 let DistanceForLocationUpdate = 500 //minimum distance in meters
-var isFirstTimeLoad = true
 
 
 // MARK:- API Keys

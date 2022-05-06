@@ -10,6 +10,7 @@ import UIKit
 import CiyaShopSecurityFramework
 import SDWebImage
 import SwiftyJSON
+import Alamofire
 
 enum HomeCellType {
     case mainCategory
@@ -78,6 +79,9 @@ class HomeVC: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        checkVersionUpdate()
+        
         if !isOpen{
             showToast(message: getLocalizationString(key: "shopClosed"))
         }
@@ -147,7 +151,61 @@ class HomeVC: UIViewController {
         self.headerFrame = self.headerView.frame
         self.topCollectionFrame = self.cvTopCategories.frame
     }
+    //MARK:- Check update version
     
+    func checkVersionUpdate()
+    {
+
+        self.showUpdatePopUp()
+            /*checkAppStore()
+            { isNew, version in
+                print("IS NEW VERSION AVAILABLE: \(isNew), APP STORE VERSION: \(version)")
+                if(isNew!)
+                {
+                    self.showUpdatePopUp()
+                }
+//
+            }*/
+    }
+    func checkAppStore(callback: ((_ versionAvailable: Bool?, _ version: String?)->Void)? = nil) {
+            let ourBundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
+            Alamofire.request("https://itunes.apple.com/lookup?bundleId=\(ourBundleId)").responseJSON { response in
+                print("response - ", response)
+                var isNew: Bool?
+                var versionStr: String?
+
+                if let json = response.result.value as? NSDictionary,
+                   let results = json["results"] as? NSArray,
+                   let entry = results.firstObject as? NSDictionary,
+                   let appVersion = entry["version"] as? String,
+                   let ourVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+                {
+                    isNew = ourVersion != appVersion
+                    versionStr = appVersion
+                }
+
+//                self.appStoreVersion = versionStr
+//                self.newVersionAvailable = isNew
+                callback?(isNew, versionStr)
+            }
+        }
+    //MARK:-
+    func showUpdatePopUp()
+    {
+//
+        
+        let vc = Bundle.main.loadNibNamed("VersionVC", owner: self, options: nil)?.first as! VersionVC
+        vc.frame = self.view.bounds
+        self.view.addSubview(vc)
+//        addAlertAnimation(view: vc, blurView: vc.blurView)
+        
+//        let vc = VersionVC(nibName: "VersionVC", bundle: nil)
+//        self.present(vc, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
+    //MARK:-
     @objc func changeSaleTimer() {
         
         saleSeconds = saleSeconds - 1;
