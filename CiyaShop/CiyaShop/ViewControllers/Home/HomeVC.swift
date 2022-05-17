@@ -156,16 +156,16 @@ class HomeVC: UIViewController {
     func checkVersionUpdate()
     {
 
-        self.showUpdatePopUp()
-            /*checkAppStore()
+     
+            checkAppStore()
             { isNew, version in
                 print("IS NEW VERSION AVAILABLE: \(isNew), APP STORE VERSION: \(version)")
-                if(isNew!)
+                if(isNew ?? false)
                 {
                     self.showUpdatePopUp()
                 }
 //
-            }*/
+            }
     }
     func checkAppStore(callback: ((_ versionAvailable: Bool?, _ version: String?)->Void)? = nil) {
             let ourBundleId = Bundle.main.infoDictionary!["CFBundleIdentifier"] as! String
@@ -200,7 +200,7 @@ class HomeVC: UIViewController {
 //        addAlertAnimation(view: vc, blurView: vc.blurView)
         
 //        let vc = VersionVC(nibName: "VersionVC", bundle: nil)
-//        self.present(vc, animated: true, completion: nil)
+           //        self.present(vc, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(vc, animated: true)
         
         
