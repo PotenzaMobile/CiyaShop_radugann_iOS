@@ -54,6 +54,7 @@ class AccountVC: UIViewController {
 //                getClientInfo()
 //            }
 //        }
+        setAccountData()
         getInfoPages()
         if(is_Logged_in && isTeraWalletActive)
         {
@@ -473,6 +474,7 @@ extension AccountVC : UITableViewDelegate,UITableViewDataSource  {
                 {
                     cell.lblWalletBalance.text = MCLocalization.string(for: "WalletBalance")! + " : " + "\(strWalletBalance) \(strWalletBalanceCurrency.htmlEncodedString())"
                     cell.imgBag.isHidden = false
+                    cell.constraintHeightWalletBalance.constant = 25
                     cell.lblWalletBalance.isHidden = false
                 }else{
                     cell.lblWalletBalance.isHidden = true
@@ -834,7 +836,11 @@ extension AccountVC : UITableViewDelegate,UITableViewDataSource  {
             }else{
                 isCatalogMode = false
             }
-        } else {
+        }
+        else if getValueFromLocal(key: USERID_KEY) as? String == nil{
+            isCatalogMode = true
+        }
+        else {
             isCatalogMode = true
         }
         

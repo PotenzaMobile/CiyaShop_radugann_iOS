@@ -94,8 +94,6 @@
                                         </imageView>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KKV-yZ-dsi" customClass="FloatingTextField" customModule="CiyaShop" customModuleProvider="target">
                                             <rect key="frame" x="50" y="6" width="216" height="34"/>
-                                            <string key="text">audi658
-</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                         </textField>
@@ -128,10 +126,6 @@
                                         </imageView>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CZt-ch-YR3" customClass="FloatingTextField" customModule="CiyaShop" customModuleProvider="target">
                                             <rect key="frame" x="50" y="6" width="216" height="34"/>
-                                            <string key="text">^Xgl3sSfK6p5WkHPNi0bD8Y@
-
-
-</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                         </textField>

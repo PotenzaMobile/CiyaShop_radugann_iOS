@@ -113,6 +113,20 @@ class CartItemCell: UITableViewCell {
             }
         }
         
+        if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
+            if userId.isEmpty{
+                self.lblPrice.isHidden = true
+                
+            }else{
+                self.lblPrice.isHidden = false
+            }
+        }
+        else if getValueFromLocal(key: USERID_KEY) as? String == nil{
+            self.lblPrice.isHidden = true
+        }
+        else{
+            self.lblPrice.isHidden = false
+        }
         
         let priceValue = product["price_html"].string!.withoutHtmlString()
         if priceValue == "" {

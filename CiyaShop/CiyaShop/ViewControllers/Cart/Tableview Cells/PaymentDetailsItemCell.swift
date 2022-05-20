@@ -89,6 +89,27 @@ class PaymentDetailsItemCell: UITableViewCell {
         var shipping : Double = 0.00
         var totalAmount : Double = 0.00
         
+        if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
+            if userId.isEmpty{
+                self.lblSubTotalValue.isHidden = true
+                self.lblTotalAmountValue.isHidden = true
+                
+            }else{
+                self.lblSubTotalValue.isHidden = false
+                self.lblTotalAmountValue.isHidden = false
+            }
+        }
+        else if getValueFromLocal(key: USERID_KEY) as? String == nil{
+            self.lblSubTotalValue.isHidden = true
+            self.lblTotalAmountValue.isHidden = true
+        }
+        else{
+            self.lblSubTotalValue.isHidden = false
+            self.lblTotalAmountValue.isHidden = false
+        }
+        
+        
+        
         var arrayData : [JSON] = []
         
         if(selectedCheckoutType == .cart)

@@ -108,7 +108,11 @@ class SpecialDealProductItemCell: UICollectionViewCell {
             }else{
                 self.lblPrice.isHidden = false
             }
-        }else{
+        }
+        else if getValueFromLocal(key: USERID_KEY) as? String == nil{
+            self.lblPrice.isHidden = true
+        }
+        else{
             self.lblPrice.isHidden = false
         }
         

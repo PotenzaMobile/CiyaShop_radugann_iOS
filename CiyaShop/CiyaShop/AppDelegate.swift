@@ -225,7 +225,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate,UNUserNo
     
     func setLoginDetails() {
         if let isLoggedIn = getValueFromLocal(key: LOGIN_KEY) {
-            is_Logged_in = isLoggedIn as! Bool
+            is_Logged_in = isLoggedIn as? Bool ?? false
         }
     }
     

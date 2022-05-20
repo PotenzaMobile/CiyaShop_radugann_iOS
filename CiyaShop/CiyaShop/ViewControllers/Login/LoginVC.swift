@@ -308,7 +308,11 @@ class LoginVC: UIViewController,GIDSignInDelegate, ASAuthorizationControllerPres
                     }else{
                         isCatalogMode = false
                     }
-                } else {
+                }
+                else if getValueFromLocal(key: USERID_KEY) as? String == nil{
+                    isCatalogMode = true
+                }
+                else {
                     isCatalogMode = true
                 }
                 

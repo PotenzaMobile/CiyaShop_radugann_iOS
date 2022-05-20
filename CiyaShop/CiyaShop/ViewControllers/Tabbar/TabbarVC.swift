@@ -445,14 +445,17 @@ class TabbarVC: BaseViewController,UITabBarControllerDelegate {
                 }
             }
         }
-        
         if let userId =  getValueFromLocal(key: USERID_KEY) as? String {
             if userId.isEmpty{
                 isCatalogMode = true
             }else{
                 isCatalogMode = false
             }
-        } else {
+        }
+        else if getValueFromLocal(key: USERID_KEY) as? String == nil{
+            isCatalogMode = true
+        }
+        else {
             isCatalogMode = true
         }
         
